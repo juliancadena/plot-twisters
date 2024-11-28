@@ -70,7 +70,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data, slug }, index) =>
                 index < SITE.postPerIndex && (
                   <Card
-                    href={`plot-twisters/posts/${slug}/`}
+                    href={`/plot-twisters/posts/${slug}/`}
                     frontmatter={data}
                     secHeading={false}
                   />
