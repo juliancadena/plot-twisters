@@ -34,6 +34,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+
+        - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23.1.0'  # Especifica la versión de Node.js
+
+      - name: Configurar pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.12.3
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
